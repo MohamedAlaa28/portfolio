@@ -7,6 +7,7 @@ import {
   FormErrorMessage,
   FormLabel,
   Heading,
+  Image,
   Input,
   Select,
   Textarea,
@@ -17,7 +18,7 @@ import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
-
+// import contactPic from "../images/erica-steeves-G_lwAp0TF38-unsplash.jpg";
 const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
@@ -60,90 +61,103 @@ const LandingSection = () => {
     <FullScreenSection
       isDarkBackground
       backgroundColor="#512DA8"
-      py={8}
-      spacing={8}
+      alignItems="flex-start"
+      justifyContent="flex-start"
+      width="100%"
+      // width={width}
     >
-      <VStack w={width} alignItems="flex-start">
-        <Heading as="h1" id="contactMe-section" fontSize="calc(1.7vw + 10px)">
-          Contact me
-        </Heading>
-        <Box p={6} rounded="md" w="100%">
-          <form onSubmit={formik.handleSubmit}>
-            <VStack spacing={4}>
-              <FormControl
-                isInvalid={formik.touched.firstName && formik.errors.firstName}
-              >
-                <FormLabel htmlFor="firstName" fontSize={fontSize}>
-                  Name
-                </FormLabel>
-                <Input
-                  id="firstName"
-                  name="firstName"
-                  {...formik.getFieldProps("firstName")}
-                  fontSize={fontSize}
-                />
-                <FormErrorMessage fontSize={fontSize}>
-                  {formik.errors.firstName}
-                </FormErrorMessage>
-              </FormControl>
-              <FormControl
-                isInvalid={formik.touched.email && formik.errors.email}
-              >
-                <FormLabel htmlFor="email" fontSize={fontSize}>
-                  Email Address
-                </FormLabel>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  {...formik.getFieldProps("email")}
-                  fontSize={fontSize}
-                />
-                <FormErrorMessage fontSize={fontSize}>
-                  {" "}
-                  {formik.errors.email}
-                </FormErrorMessage>
-              </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="type" fontSize={fontSize}>
-                  Type of enquiry
-                </FormLabel>
-                <Select id="type" name="type" fontSize={fontSize}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
-                  <option value="other">Other</option>
-                </Select>
-              </FormControl>
-              <FormControl
-                isInvalid={formik.touched.comment && formik.errors.comment}
-              >
-                <FormLabel htmlFor="comment" fontSize={fontSize}>
-                  Your message
-                </FormLabel>
-                <Textarea
-                  id="comment"
-                  name="comment"
-                  height={250}
-                  {...formik.getFieldProps("comment")}
-                  fontSize={fontSize}
-                />
-                <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
-              </FormControl>
-              <Button
-                type="submit"
-                colorScheme="purple"
-                width="full"
-                isLoading={isLoading}
+      <Heading id="contactMe-section" as="h1" fontSize="calc(1.7vw + 10px)">
+        Contact me
+      </Heading>
+
+      <Box
+        rounded="md"
+        w="100%"
+        // display="grid"
+        //  gridTemplateColumns="1fr 1fr"
+      >
+        {/* <Image
+          borderRadius="md"
+          src={contactPic}
+          alt="contactPic"
+          // height="100%"
+          my={"auto"}
+          display={{base:"none", md:"block"}}
+        /> */}
+        <form onSubmit={formik.handleSubmit}>
+          <VStack spacing={4}>
+            <FormControl
+              isInvalid={formik.touched.firstName && formik.errors.firstName}
+            >
+              <FormLabel htmlFor="firstName" fontSize={fontSize}>
+                Name
+              </FormLabel>
+              <Input
+                id="firstName"
+                name="firstName"
+                {...formik.getFieldProps("firstName")}
                 fontSize={fontSize}
-              >
-                Submit
-              </Button>
-            </VStack>
-          </form>
-        </Box>
-      </VStack>
+              />
+              <FormErrorMessage fontSize={fontSize}>
+                {formik.errors.firstName}
+              </FormErrorMessage>
+            </FormControl>
+            <FormControl
+              isInvalid={formik.touched.email && formik.errors.email}
+            >
+              <FormLabel htmlFor="email" fontSize={fontSize}>
+                Email Address
+              </FormLabel>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                {...formik.getFieldProps("email")}
+                fontSize={fontSize}
+              />
+              <FormErrorMessage fontSize={fontSize}>
+                {formik.errors.email}
+              </FormErrorMessage>
+            </FormControl>
+            <FormControl>
+              <FormLabel htmlFor="type" fontSize={fontSize}>
+                Type of enquiry
+              </FormLabel>
+              <Select id="type" name="type" fontSize={fontSize} bg="#512DA8">
+                <option value="hireMe">Freelance project proposal</option>
+                <option value="openSource">
+                  Open source consultancy session
+                </option>
+                <option value="other">Other</option>
+              </Select>
+            </FormControl>
+            <FormControl
+              isInvalid={formik.touched.comment && formik.errors.comment}
+            >
+              <FormLabel htmlFor="comment" fontSize={fontSize}>
+                Your message
+              </FormLabel>
+              <Textarea
+                id="comment"
+                name="comment"
+                height={250}
+                {...formik.getFieldProps("comment")}
+                fontSize={fontSize}
+              />
+              <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
+            </FormControl>
+            <Button
+              type="submit"
+              colorScheme="purple"
+              width="full"
+              isLoading={isLoading}
+              fontSize={fontSize}
+            >
+              Submit
+            </Button>
+          </VStack>
+        </form>
+      </Box>
     </FullScreenSection>
   );
 };

@@ -8,13 +8,15 @@ const Card = ({ title, description, imageSrc, url }) => {
   const [isArrowHovered, setIsArrowHovered] = useState(false);
   return (
     <VStack
+      display="grid"
       alignItems="flex-start"
+      // gridTemplateRows="2fr 3fr"
       borderRadius="md"
       backgroundColor={"#EDEFEE"}
       boxShadow={
         isCardHovered
           ? "0px 0px 0.85vw rgba(255, 255, 255, 0.3), 0px 0px 0px 0.2vw rgba(255, 255, 255, 0.3)"
-          : "0px 0px 1.25vw rgba(0, 0, 0, 0.1), 0px 0px 0px 0.2vw rgba(255, 255, 255, 0.3);"
+          : "0px 0px 1.25vw rgba(0, 0, 0, 0.1), 0px 0px 0px 0.2vw rgba(255, 255, 255, 0.3)"
       }
       transition="box-shadow 0.3s ease-in-out"
       onMouseEnter={() => setIsCardHovered(true)}
@@ -26,16 +28,16 @@ const Card = ({ title, description, imageSrc, url }) => {
         src={imageSrc}
         alt={title}
         width="100%"
-        height="40%"
+        // height="40%"
       />
       <VStack
         display="grid"
-        gridTemplateRows="2fr 2fr 2fr"
+        // gridTemplateRows="2fr 2fr 2fr"
         borderRadius="md"
         boxShadow="md"
-        height="60%"
+        // height="60%"
         p="1.25vw"
-        // spacing={4}
+        spacing={4}
       >
         <Heading as="h3" size="md">
           <Text

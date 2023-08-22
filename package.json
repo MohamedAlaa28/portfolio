@@ -2,6 +2,7 @@
   "name": "graded-assessment",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MohamedAlaa28.github.io/Portfolio",
   "dependencies": {
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.10.4",
@@ -24,6 +25,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "prettier": "^2.7.1"
   }
 }

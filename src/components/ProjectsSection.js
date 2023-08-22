@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     title: "Book Tracking App",
     description:
-      "A React bookshelf app with categorized books, utilizing an API for data persistence.",
+      "A React bookshelf app designed to manage categorized books, effectively utilizing an API for data persistence.",
     getImageSrc: () =>
       require("../images/book-tracking-screenshots/Screenshot_1.png"),
       url:"https:github.com/MohamedAlaa28/A-Book-Tracking-App",
@@ -39,21 +39,17 @@ const ProjectsSection = () => {
       backgroundColor="#14532d"
       isDarkBackground
       alignItems="flex-start"
-      p={6}
-      spacing={8}
     >
       <Heading
-        as="h1"
         id="projects-section"
+        as="h1"
         fontSize="calc(1.7vw + 10px)"
       >
         Featured Projects
       </Heading>
       <SimpleGrid
-        columns={{ base: 2, sm: 3, md: 4 }}
-        //  spacing="2vw"
-        spacing={{ base: "4vw", sm: "3vw", md: "2vw" }}
-        // w="100%"
+        columns={{ base: 2, sm: 3, md: 3 }}
+        spacing={{ base: "4vw", sm: "3vw", md: "3vw" }}
         justifyContent="center"
       >
         {projects.map((project) => (
