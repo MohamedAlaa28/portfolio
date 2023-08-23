@@ -18,7 +18,7 @@ import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
-// import contactPic from "../images/erica-steeves-G_lwAp0TF38-unsplash.jpg";
+
 const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
@@ -50,41 +50,42 @@ const LandingSection = () => {
     }
   }, [response]);
 
-  const width = useBreakpointValue({
-    base: "100%",
-    md: "calc(33.5vw + 525px)",
-    sm: "90vw",
-  });
+  // const width = useBreakpointValue({
+  //   base: "100%",
+  //   md: "calc(33.5vw + 525px)",
+  //   sm: "90vw",
+  // });
   const fontSize = "calc(0.4vw + 10px)";
 
   return (
     <FullScreenSection
-      isDarkBackground
-      backgroundColor="#512DA8"
+      // isDarkBackground
+      backgroundColor="#2A4365"
       alignItems="flex-start"
       justifyContent="flex-start"
-      width="100%"
-      // width={width}
+      w={{ base: "100%", md: "calc(50% + 20px)" }}
+      m={{ base: 0, md: "auto 0" }}
     >
-      <Heading id="contactMe-section" as="h1" fontSize="calc(1.7vw + 10px)">
+      <Heading
+        id="contactMe-section"
+        as="h1"
+        fontSize="calc(1.7vw + 10px)"
+        color={"white"}
+      >
         Contact me
       </Heading>
 
-      <Box
-        rounded="md"
-        w="100%"
-        // display="grid"
-        //  gridTemplateColumns="1fr 1fr"
-      >
-        {/* <Image
-          borderRadius="md"
-          src={contactPic}
-          alt="contactPic"
-          // height="100%"
-          my={"auto"}
-          display={{base:"none", md:"block"}}
-        /> */}
-        <form onSubmit={formik.handleSubmit}>
+      <Box rounded="md" width="100%">
+        <form
+          onSubmit={formik.handleSubmit}
+          style={{
+            padding: "2vw",
+            borderRadius: "1vw",
+            backgroundColor: "#EDEFEE",
+            boxShadow:
+              "0px 0px 1.25vw rgba(0, 0, 0, 0.1), 0px 0px 0px 0.2vw rgba(255, 255, 255, 0.3)",
+          }}
+        >
           <VStack spacing={4}>
             <FormControl
               isInvalid={formik.touched.firstName && formik.errors.firstName}
@@ -97,6 +98,9 @@ const LandingSection = () => {
                 name="firstName"
                 {...formik.getFieldProps("firstName")}
                 fontSize={fontSize}
+                borderColor="#2A4365"
+                boxShadow="0 0 0 1px #2A4365"
+                color={"white"}
               />
               <FormErrorMessage fontSize={fontSize}>
                 {formik.errors.firstName}
@@ -114,6 +118,8 @@ const LandingSection = () => {
                 type="email"
                 {...formik.getFieldProps("email")}
                 fontSize={fontSize}
+                borderColor="#2A4365"
+                boxShadow="0 0 0 1px #2A4365"
               />
               <FormErrorMessage fontSize={fontSize}>
                 {formik.errors.email}
@@ -123,11 +129,16 @@ const LandingSection = () => {
               <FormLabel htmlFor="type" fontSize={fontSize}>
                 Type of enquiry
               </FormLabel>
-              <Select id="type" name="type" fontSize={fontSize} bg="#512DA8">
-                <option value="hireMe">Freelance project proposal</option>
-                <option value="openSource">
-                  Open source consultancy session
-                </option>
+              <Select
+                id="type"
+                name="type"
+                fontSize={fontSize}
+                borderColor="#2A4365"
+                boxShadow="0 0 0 1px #2A4365"
+              >
+                <option value="fullTime">Full time opportunity</option>
+                <option value="partTime">Part time opportunity</option>
+                <option value="hireMe">Freelance project</option>
                 <option value="other">Other</option>
               </Select>
             </FormControl>
@@ -143,15 +154,21 @@ const LandingSection = () => {
                 height={250}
                 {...formik.getFieldProps("comment")}
                 fontSize={fontSize}
+                borderColor="#2A4365"
+                boxShadow="0 0 0 1px #2A4365"
               />
               <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
             </FormControl>
             <Button
               type="submit"
-              colorScheme="purple"
+              // colorScheme="purple"
+              backgroundColor={"#2A4365"}
+              color={"white"}
               width="full"
               isLoading={isLoading}
               fontSize={fontSize}
+              _hover={{ backgroundColor: "#18181b" }}
+              transition="background-color 0.3s ease-in-out"
             >
               Submit
             </Button>

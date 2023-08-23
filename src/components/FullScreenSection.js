@@ -12,9 +12,7 @@ const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
     >
       <VStack
         maxWidth="1280px"
-        minHeight="calc(37.5vw + 200px)"
-        px={16}
-        py={6}
+        p={6}
         spacing={8}
         {...boxProps}
       >

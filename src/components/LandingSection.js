@@ -14,6 +14,7 @@ const LandingSection = () => (
     justifyContent="center"
     alignItems="center"
     isDarkBackground
+    minHeight="calc(37.5vw + 200px)"
     backgroundColor="#2A4365"
   >
     <VStack>

@@ -80,8 +80,7 @@ const Header = () => {
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          px={16}
-          py={6}
+          p={6}
           justifyContent="space-between"
           alignItems="center"
           fontSize="calc(0.7vw + 5px)"
@@ -97,12 +96,34 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={"calc(1.7vw + 5px)"}>
-              <a href="/#projects" onClick={handleClick("projects")}>
+              <Link
+                href="/#projects"
+                onClick={handleClick("projects")}
+                style={{ textDecoration: "none" }}
+              >
                 Projects
-              </a>
-              <a href="/#contact-me" onClick={handleClick("contactme")}>
+              </Link>
+              <Link
+                href="/#experience"
+                onClick={handleClick("experience")}
+                style={{ textDecoration: "none" }}
+              >
+                Experience
+              </Link>
+              <Link
+                href="/#certificates"
+                onClick={handleClick("certificates")}
+                style={{ textDecoration: "none" }}
+              >
+                Certificates
+              </Link>
+              <Link
+                href="/#contactMe"
+                onClick={handleClick("contactMe")}
+                style={{ textDecoration: "none" }}
+              >
                 Contact Me
-              </a>
+              </Link>
             </HStack>
           </nav>
         </HStack>

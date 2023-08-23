@@ -20,7 +20,7 @@ const projects = [
       "A React bookshelf app designed to manage categorized books, effectively utilizing an API for data persistence.",
     getImageSrc: () =>
       require("../images/book-tracking-screenshots/Screenshot_1.png"),
-      url:"https:github.com/MohamedAlaa28/A-Book-Tracking-App",
+      url:"https://github.com/MohamedAlaa28/A-Book-Tracking-App",
   },
   {
     id: 3,
@@ -36,9 +36,10 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <FullScreenSection
-      backgroundColor="#14532d"
+      backgroundColor="#253C5A"
       isDarkBackground
       alignItems="flex-start"
+      minHeight="calc(22.5vw + 150px)"
     >
       <Heading
         id="projects-section"
@@ -48,8 +49,8 @@ const ProjectsSection = () => {
         Featured Projects
       </Heading>
       <SimpleGrid
-        columns={{ base: 2, sm: 3, md: 3 }}
-        spacing={{ base: "4vw", sm: "3vw", md: "3vw" }}
+        columns={{ base: 2, sm: 3, md: 4 }}
+        spacing={{ base: "4vw", sm: "3vw", md: "4vw" }}
         justifyContent="center"
       >
         {projects.map((project) => (
