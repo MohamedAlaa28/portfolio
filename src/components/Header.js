@@ -8,7 +8,6 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Link } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
 const socials = [
   {
     icon: faEnvelope,
