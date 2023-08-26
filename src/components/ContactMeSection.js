@@ -32,21 +32,21 @@ const LandingSection = () => {
     },
 
     onSubmit: async (values) => {
-      // emailjs
-      //   .sendForm(
-      //     "service_v13u6jn",
-      //     "template_i80ongn",
-      //     form.current,
-      //     "4GUIwP7zgoMVHGwDM"
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log(result.text);
-      //     },
-      //     (error) => {
-      //       console.log(error.text);
-      //     }
-      //   );
+      emailjs
+        .sendForm(
+          "service_v13u6jn",
+          "template_i80ongn",
+          form.current,
+          "4GUIwP7zgoMVHGwDM"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
       submit("", values);
     },
 
