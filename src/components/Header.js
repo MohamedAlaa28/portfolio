@@ -97,28 +97,28 @@ const Header = () => {
           <nav>
             <HStack spacing={"calc(1.7vw + 5px)"}>
               <Link
-                href="https://mohamedalaa28.github.io/Portfolio/#projects"
+                href="/#projects"
                 onClick={handleClick("projects")}
                 style={{ textDecoration: "none" }}
               >
                 Projects
               </Link>
               <Link
-                href="https://mohamedalaa28.github.io/Portfolio/#experience"
+                href="/#experience"
                 onClick={handleClick("experience")}
                 style={{ textDecoration: "none" }}
               >
                 Experience
               </Link>
               <Link
-                href="https://mohamedalaa28.github.io/Portfolio/#certificates"
+                href="/#certificates"
                 onClick={handleClick("certificates")}
                 style={{ textDecoration: "none" }}
               >
                 Certificates
               </Link>
               <Link
-                href="https://mohamedalaa28.github.io/Portfolio/#contactMe"
+                href="/#contactMe"
                 onClick={handleClick("contactMe")}
                 style={{ textDecoration: "none" }}
               >
