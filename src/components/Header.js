@@ -8,7 +8,7 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Link } from "@chakra-ui/react";
-
+import { Link as RouterLink } from "react-router-dom";
 const socials = [
   {
     icon: faEnvelope,
@@ -98,28 +98,28 @@ const Header = () => {
           <nav>
             <HStack spacing={"calc(1.7vw + 5px)"}>
               <Link
-                href="/#projects"
+                href="https://mohamedalaa28.github.io/Portfolio/#projects"
                 onClick={handleClick("projects")}
                 style={{ textDecoration: "none" }}
               >
                 Projects
               </Link>
               <Link
-                href="/#experience"
+                href="https://mohamedalaa28.github.io/Portfolio/#experience"
                 onClick={handleClick("experience")}
                 style={{ textDecoration: "none" }}
               >
                 Experience
               </Link>
               <Link
-                href="/#certificates"
+                href="https://mohamedalaa28.github.io/Portfolio/#certificates"
                 onClick={handleClick("certificates")}
                 style={{ textDecoration: "none" }}
               >
                 Certificates
               </Link>
               <Link
-                href="/#contactMe"
+                href="https://mohamedalaa28.github.io/Portfolio/#contactMe"
                 onClick={handleClick("contactMe")}
                 style={{ textDecoration: "none" }}
               >

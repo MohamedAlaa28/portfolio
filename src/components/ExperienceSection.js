@@ -32,20 +32,17 @@ const experiences = [
 const ExperienceSection = () => {
   return (
     <FullScreenSection
+      id="experience-section"
       backgroundColor="#2A4365"
       isDarkBackground
       alignItems="flex-start"
       justifyContent="flex-start"
       width="100%"
     >
-      <Heading id="experience-section" as="h1" fontSize="calc(1.7vw + 10px)">
+      <Heading as="h1" fontSize="calc(1.7vw + 10px)">
         Experience
       </Heading>
-      <VStack
-        display="grid"
-        color={"#EDEFEE"}
-        px={6}
-      >
+      <VStack display="grid" color={"#EDEFEE"} px={6}>
         {experiences.map((experience) => (
           <Box key={experience.id}>
             <Text fontSize="calc(1vw + 5px)" fontWeight="bold">

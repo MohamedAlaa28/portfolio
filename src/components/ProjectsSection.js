@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 // import { fetchRepos } from "../api/api";
 const projects = [
@@ -11,7 +11,7 @@ const projects = [
       "Restaurant Website Containing a Home Page and A Form That Handles Table Bookings for The Restaurant.",
     getImageSrc: () =>
       require("../images/lemon-restaurant-screenshots/Screenshot_8.png"),
-    url:"https://github.com/MohamedAlaa28/lemon-restaurant-app",
+    url: "https://github.com/MohamedAlaa28/lemon-restaurant-app",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = [
       "A React bookshelf app designed to manage categorized books, effectively utilizing an API for data persistence.",
     getImageSrc: () =>
       require("../images/book-tracking-screenshots/Screenshot_1.png"),
-      url:"https://github.com/MohamedAlaa28/A-Book-Tracking-App",
+    url: "https://github.com/MohamedAlaa28/A-Book-Tracking-App",
   },
   {
     id: 3,
@@ -29,23 +29,20 @@ const projects = [
       "Food delivery app with React, Tailwind CSS, and Firebase for streamlined online food ordering and delivery.",
     getImageSrc: () =>
       require("../images/food-delivery-screenshots/Screenshot_1.png"),
-      url:"https://github.com/MohamedAlaa28/food-delivery-app",
+    url: "https://github.com/MohamedAlaa28/food-delivery-app",
   },
 ];
 
 const ProjectsSection = () => {
   return (
     <FullScreenSection
+      id="projects-section"
       backgroundColor="#253C5A"
       isDarkBackground
       alignItems="flex-start"
       minHeight="calc(22.5vw + 150px)"
     >
-      <Heading
-        id="projects-section"
-        as="h1"
-        fontSize="calc(1.7vw + 10px)"
-      >
+      <Heading as="h1" fontSize="calc(1.7vw + 10px)">
         Featured Projects
       </Heading>
       <SimpleGrid
@@ -66,6 +63,5 @@ const ProjectsSection = () => {
     </FullScreenSection>
   );
 };
-
 
 export default ProjectsSection;

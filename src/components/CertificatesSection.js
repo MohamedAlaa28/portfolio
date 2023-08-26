@@ -87,13 +87,14 @@ const CertificatesSection = () => {
 
   return (
     <FullScreenSection
+      id="certificates-section"
       backgroundColor="#253C5A"
       isDarkBackground
       alignItems="flex-start"
       justifyContent="flex-start"
       width="100%"
     >
-      <Heading id="certificates-section" as="h1" fontSize="calc(1.7vw + 10px)">
+      <Heading as="h1" fontSize="calc(1.7vw + 10px)">
         Certificates
       </Heading>
       <VStack display="grid" px={6}>
