@@ -15,21 +15,29 @@ const projects = [
   },
   {
     id: 2,
-    title: "Book Tracking App",
-    description:
-      "A React bookshelf app designed to manage categorized books, effectively utilizing an API for data persistence.",
-    getImageSrc: () =>
-      require("../images/book-tracking-screenshots/Screenshot_1.png"),
-    url: "https://github.com/MohamedAlaa28/A-Book-Tracking-App",
-  },
-  {
-    id: 3,
     title: "Food Delivery App",
     description:
       "Food delivery app with React, Tailwind CSS, and Firebase for streamlined online food ordering and delivery.",
     getImageSrc: () =>
       require("../images/food-delivery-screenshots/Screenshot_1.png"),
     url: "https://github.com/MohamedAlaa28/food-delivery-app",
+  },
+  {
+    id: 3,
+    title: "Vendor Dashboard",
+    description:
+      "Vendor Dashboard: Streamlined e-commerce management, powered by React, Tailwind CSS, and Next.js.",
+    getImageSrc: () => require("../images/vendor-dashboard/Screenshot_1.png"),
+    url: "https://github.com/MohamedAlaa28/Vendor-Dashboard",
+  },
+  {
+    id: 4,
+    title: "Book Tracking App",
+    description:
+      "A React bookshelf application built to efficiently categorize and manage books with seamless API data integration.",
+    getImageSrc: () =>
+      require("../images/book-tracking-screenshots/Screenshot_1.png"),
+    url: "https://github.com/MohamedAlaa28/A-Book-Tracking-App",
   },
 ];
 
