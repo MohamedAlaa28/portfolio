@@ -26,7 +26,7 @@ const projects = [
     id: 3,
     title: "Vendor Dashboard",
     description:
-      "Vendor Dashboard: Streamlined e-commerce management, powered by React, Tailwind CSS, and Next.js.",
+      "A streamlined e-commerce platform, user-friendly and efficient, powered by React, Tailwind CSS, and Next.js.",
     getImageSrc: () => require("../images/vendor-dashboard/Screenshot_1.png"),
     url: "https://github.com/MohamedAlaa28/Vendor-Dashboard",
   },

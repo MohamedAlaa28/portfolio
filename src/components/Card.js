@@ -10,7 +10,7 @@ const Card = ({ title, description, imageSrc, url }) => {
     <VStack
       display="grid"
       alignItems="flex-start"
-      // gridTemplateRows="2fr 3fr"
+      // gridTemplateRows="4fr 5fr"
       borderRadius="1vw"
       backgroundColor="#EDEFEE"
       boxShadow={
@@ -28,14 +28,17 @@ const Card = ({ title, description, imageSrc, url }) => {
         src={imageSrc}
         alt={title}
         width="100%"
+        // height="100%"
       />
       <VStack
         display="grid"
-        // gridTemplateRows="2fr 2fr 2fr"
+        // gridTemplateRows="2fr 5fr 2fr"
+        gridTemplateRows={{ base: "1fr 4fr 2fr", sm: "1fr 3fr 2fr", md: "1fr 4fr 2fr" }}
         borderRadius="md"
         boxShadow="md"
         p="1.25vw"
         spacing={4}
+        height="100%"
       >
         <Heading as="h3" size="md">
           <Text
@@ -59,6 +62,7 @@ const Card = ({ title, description, imageSrc, url }) => {
             fontWeight="500"
             align="center"
             cursor="pointer"
+            marginBottom="8px"
             color={isArrowHovered ? "#2E5341" : "black"}
             transition="color 0.3s ease-in-out"
             onMouseEnter={() => setIsArrowHovered(true)}
