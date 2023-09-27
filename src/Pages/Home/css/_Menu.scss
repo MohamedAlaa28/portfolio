@@ -1,0 +1,144 @@
+$radius: 1vw;
+
+.menu-section {
+    padding: 0 15%;
+
+    .h1 {
+        font-size: var(--h1-font-size);
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+
+    .menu-sub-section {
+        background-color: #edefee;
+        border-radius: $radius;
+        position: relative;
+        display: grid;
+        padding: 2.5%;
+
+        @media (min-width: 701px) {
+            grid-template-columns: repeat(9, 1fr);
+            // padding-bottom: 26%;
+            padding-bottom: 17.5vw;
+        }
+
+        @media (max-width: 700px) {
+            grid-template-columns: repeat(5, 1fr);
+            // padding-bottom: 34%;
+            padding-bottom: 24vw;
+        }
+
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+        .button-row {
+            padding: 2.5%;
+            display: flex;
+        }
+
+        .category-button {
+            font-size: var(--button-font-size);
+            padding: 5%;
+            border: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            border-radius: 0.7vw;
+            cursor: pointer;
+            width: 100%;
+
+            &:hover,
+            &.select {
+                background-color: #495e57;
+                color: #edefee;
+            }
+        }
+
+        @media (max-width: 700px) {
+            button:nth-of-type(6) {
+                margin-bottom: 100vw;
+            }
+        }
+
+        .meals {
+            position: absolute;
+            left: 0;
+            display: grid;
+            padding: 0 2.5%;
+            gap: 1%;
+
+            @media (min-width: 701px) {
+                top: 5vw;
+                grid-template-columns: repeat(7, 1fr);
+            }
+
+            @media (max-width: 700px) {
+                top: 13.5vw;
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            .meal {
+                display: grid;
+                background-color: #edefee;
+                font-size: var(--icon-font-size);
+                border-radius: $radius;
+                white-space: nowrap;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+                transition: box-shadow 0.3s ease-in-out;
+                position: relative;
+                // padding-bottom: 2.5%;
+                justify-items: center;
+
+                &:hover {
+                    box-shadow: 0px 0px 1.25vw rgba(0, 0, 0, 0.2),
+                        0px 0px 0px 0.125vw rgba(0, 0, 0, 0.2);
+
+                    .icon {
+                        box-shadow: 0px 0px 1.25vw rgba(0, 0, 0, 0.2),
+                            0px 0px 0px 0.125vw rgba(0, 0, 0, 0.2);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    border-top-right-radius: $radius;
+                    border-top-left-radius: $radius;
+                }
+
+                div {
+                    display: grid;
+                    align-items: center;
+                    justify-items: center;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .price {
+                        color: #EE9972;
+                    }
+                }
+
+                .icon-button {
+                    border: none;
+                    padding: 0;
+                    width: 50%;
+                }
+
+                .icon {
+                    border-radius: $radius;
+                    padding: 0;
+                    cursor: pointer;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+                    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+                    padding: 15%;
+                    border-radius: 50%;
+                    font-size: var(--icon-font-size);
+
+                    &:hover {
+                        color: #495e57;
+                    }
+                }
+            }
+        }
+    }
+}

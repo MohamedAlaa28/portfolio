@@ -1,0 +1,74 @@
+$radius: 1vw;
+
+//normal-button
+.button {
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: var(--button-font-size);
+    color: black;
+    margin: 1vw 0;
+    padding: 3%;
+    background-color: #F4CE14;
+    box-shadow: inset -0.25em 0em #CCB42A;
+    border-radius: $radius;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    span {
+        text-transform: lowercase;
+    }
+}
+
+.button:hover {
+    background-color: #CCB42A;
+    box-shadow: inset -0.25em 0em #F4CE14;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    background-color: #EDEFEE;
+    box-shadow: none;
+    border: 1px solid rgba(73, 94, 87, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+//lemon-button
+.lemon-button {
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: var(--button-font-size);
+    position: relative;
+    margin: 1vw 0;
+    padding: 3%;
+    width: 10VW;
+    height: 10VW;
+    background-color: #F4CE14;
+    border-radius: 50% 5%;
+    overflow: hidden;
+    box-shadow: inset -0.25em 0em #CCB42A;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.lemon-button:hover {
+    background-color: #CCB42A;
+    box-shadow: inset -0.25em 0em #F4CE14;
+}
+
+.lemon-button:disabled {
+    cursor: not-allowed;
+    background-color: #EDEFEE;
+    box-shadow: none;
+    border: 1px solid rgba(73, 94, 87, 0.5);
+}

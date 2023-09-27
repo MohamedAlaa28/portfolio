@@ -1,0 +1,104 @@
+$radius : 1vw;
+$globalPadding : 0 15%;
+
+.confirmation {
+    margin: $globalPadding;
+    margin-bottom: 1%;
+    display: grid;
+    font-size: var(--form-font-size);
+
+    @media(min-width: 701px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 1%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: $radius;
+        box-shadow: 0px 0px 1.25vw rgba(0, 0, 0, 0.2), 0px 0px 0px 0.125vw rgba(0, 0, 0, 0.2);
+
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+
+    .booking-table {
+        border-collapse: collapse;
+        white-space: nowrap;
+        background-color: #495E57;
+        border-radius: $radius;
+        color: #EDEFEE;
+        box-shadow: 0px 0px 1.25vw rgba(0, 0, 0, 0.2), 0px 0px 0px 0.125vw rgba(0, 0, 0, 0.2);
+
+        .confirm-header {
+            text-align: center;
+            font-size: var(--h1-font-size);
+            color: #f4ce14;
+            padding: $globalPadding;
+            margin: 0;
+        }
+
+        tbody {
+            font-family: 'Karla', sans-serif;
+
+            tr {
+                display: grid;
+
+                @media(min-width: 701px) {
+                    grid-template-columns: 2fr 1fr 3fr;
+                }
+
+                @media (max-width: 700px) {
+                    grid-template-columns: 3fr 1fr 3fr;
+                }
+
+                border-radius: $radius;
+                background-color: #EDEFEE;
+                margin: 1.25vw;
+                transition: background-color 0.3s ease-in-out;
+
+
+                td {
+                    @media(min-width: 701px) {
+                        padding: 1.25vw;
+                    }
+
+                    @media (max-width: 700px) {
+                        padding: 2.9vw;
+                    }
+
+                    color: #495E57;
+                    text-align: center;
+                    font-weight: bold;
+
+                    text-align: left;
+                    padding-left: 1vw;
+
+                    span {
+                        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                        cursor: default;
+                    }
+                }
+
+                &:hover {
+                    background-color: lightgrey;
+                }
+
+                td:nth-of-type(1) {
+                    border-top-right-radius: $radius;
+                    border-bottom-right-radius: $radius;
+                }
+
+                td:nth-of-type(2) {
+                    border-top-left-radius: $radius;
+                    border-bottom-left-radius: $radius;
+                }
+            }
+
+            tr:nth-of-type(1) {
+                border-top: none;
+            }
+        }
+    }
+}

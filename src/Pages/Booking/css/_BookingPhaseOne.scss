@@ -1,0 +1,147 @@
+$radius: 1vw;
+
+.form-section-phase-one {
+    margin: 0 15% 1% 15%;
+    display: grid;
+    gap: 1%;
+
+    @media (min-width: 701px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: $radius;
+        box-shadow: 0px 0px 1.25vw rgba(0, 0, 0, 0.2), 0px 0px 0px 0.125vw rgba(0, 0, 0, 0.2);
+        // display: none;
+
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+
+
+    .from-sub-section {
+        height: 100%;
+        grid-template-rows: 2fr 5fr 3fr;
+        color: white;
+        align-items: center;
+        background-color: #495E57;
+        border-radius: $radius;
+        padding: 0 5%;
+        display: grid;
+        box-shadow: 0px 0px 1.25vw rgba(0, 0, 0, 0.2), 0px 0px 0px 0.125vw rgba(0, 0, 0, 0.2);
+
+        .booking-header {
+            font-size: var(--h1-font-size);
+            color: #f4ce14;
+            // margin: 0;
+            margin: 2%;
+            display: flex;
+            background-color: #495E57;
+            justify-content: center;
+            // align-self: flex-end;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5%;
+            margin: 0;
+            // align-self: center;
+
+            .form-column {
+                display: grid;
+                grid-gap: 25%;
+            }
+
+            label {
+                font-size: var(--p-font-size);
+            }
+
+            .radio-section {
+                display: flex;
+                gap: 25%;
+
+                input[type="radio"] {
+                    appearance: none;
+                    display: inline-block;
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 50%;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    box-shadow: 0 0 0 0.15vw #EDEFEE;
+                    border: 0.30vw solid #495E57;
+                    transition: box-shadow 0.3s ease-in-out;
+
+                    &:hover {
+                        box-shadow: 0 0 0 0.15vw lightgrey;
+                    }
+                }
+
+                input[type="radio"]:checked {
+                    background-color: #EDEFEE !important;
+                    background-clip: content-box;
+                }
+            }
+
+            .input-section {
+                position: relative;
+
+                .error-message {
+                    color: #EE9972;
+                    position: absolute;
+                    white-space: nowrap;
+                    left: 0;
+                    font-size: var(--p-font-size);
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: default;
+                    gap: 0.25vw;
+
+                    @media (min-width: 701px) {
+                        margin: 0;
+                    }
+
+                    @media (max-width: 700px) {
+                        margin-top: 1vw;
+                    }
+
+                    .icon {
+                        margin-top: 0.25%;
+                    }
+                }
+            }
+
+        }
+
+        Button {
+            display: flex;
+            justify-content: center;
+            // align-self: flex-start;
+            width: 100%;
+            margin: 19% 0;
+            background-color: #EDEFEE;
+            box-shadow: inset -0.25em 0em lightgrey;
+            color: #495E57;
+        }
+
+        Button:hover {
+            background-color: lightgrey;
+            box-shadow: inset -0.25em 0em #EDEFEE;
+        }
+
+        .custom-input {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5%;
+            width: 100%;
+            white-space: nowrap;
+        }
+    }
+}

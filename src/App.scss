@@ -1,0 +1,63 @@
+body {
+  font-family: 'Karla', sans-serif;
+  text-transform: capitalize;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --h1-font-size: 4.35vw;
+  --h3-font-size: 2.65vw;
+  --button-font-size: 1.5vw;
+  --icon-font-size: 1.35vw;
+  --form-font-size: 1.05vw;
+  --p-font-size: 1vw;
+}
+
+@media (max-width: 700px) {
+  :root {
+      --h1-font-size: 8.7vw;
+      --h3-font-size: 5.3vw;
+      --button-font-size: 3vw;
+      --icon-font-size: 2.55vw;
+      --form-font-size: 2.55vw;
+      --p-font-size: 2vw;
+  }
+}
+
+.h1,.h2,.h3{
+  font-family: 'Markazi Text', serif;
+  font-weight: bold;
+}
