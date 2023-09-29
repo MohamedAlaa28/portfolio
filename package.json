@@ -2,7 +2,7 @@
   "name": "graded-assessment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MohamedAlaa28.github.io/Portfolio",
+  "homepage": "https://MohamedAlaa28.github.io/portfolio",
   "dependencies": {
     "@chakra-ui/react": "^2.3.2",
     "@emailjs/browser": "^3.11.0",
