@@ -19,14 +19,14 @@ const experiences = [
     city: "Damietta, Egypt",
     role: "- Handling a fantastic digital scientific experiment using CreateJs.",
   },
-  {
-    id: 3,
-    title: "Frontend Developer",
-    company: "Mytreety",
-    duration: "May 2022 - Jun 2022",
-    city: "Egypt · Remote",
-    role: "- Creating an e-commerce Home Page with ReactJs. - Developing Dashboards for Vendors and Charities with NextJs and Tailwind.",
-  },
+  // {
+  //   id: 3,
+  //   title: "Frontend Developer",
+  //   company: "Mytreety",
+  //   duration: "May 2022 - Jun 2022",
+  //   city: "Egypt · Remote",
+  //   role: "- Creating an e-commerce Home Page with ReactJs. - Developing Dashboards for Vendors and Charities with NextJs and Tailwind.",
+  // },
 ];
 
 const ExperienceSection = () => {
